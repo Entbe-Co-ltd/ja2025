@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Regular.woff2') format('woff2'),
+       url('./assets/fonts/Pretendard-Regular.woff') format('woff'),
+       url('./assets/fonts/Pretendard-Regular.ttf') format('truetype'),
+       url('./assets/fonts/Pretendard-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Medium.woff2') format('woff2'),
+       url('./assets/fonts/Pretendard-Medium.woff') format('woff'),
+       url('./assets/fonts/Pretendard-Medium.ttf') format('truetype'),
+       url('./assets/fonts/Pretendard-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Bold.woff2') format('woff2'),
+       url('./assets/fonts/Pretendard-Bold.woff') format('woff'),
+       url('./assets/fonts/Pretendard-Bold.ttf') format('truetype'),
+       url('./assets/fonts/Pretendard-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'boba-mono';
+    src: url('./assets/fonts/boba-mono.otf') format('opentype');
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  color: white;
+}
+
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-x 8s ease infinite;
+}
+
